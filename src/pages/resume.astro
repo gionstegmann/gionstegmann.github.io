@@ -1,0 +1,226 @@
+---
+import resumeData from "../data/resume.json";
+import Layout from "../layouts/Layout.astro";
+
+const { experience, education, skills_awards, header } = resumeData;
+---
+
+<Layout title="Resume | Gion Stegmann">
+  <div class="pt-24 pb-20 px-4 md:px-0">
+    <section
+      id="resume"
+      class="max-w-4xl mx-auto bg-[#0a0a0c] border border-white/5 p-8 md:p-12 rounded-xl shadow-2xl relative overflow-hidden"
+    >
+      <!-- Subtle BG accent -->
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--primary)] rounded-full blur-[150px] opacity-5 pointer-events-none"
+      >
+      </div>
+
+      <!-- Header -->
+      <div
+        class="mb-8 border-b border-white/10 pb-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 text-sm"
+      >
+        <div>
+          <h1 class="text-4xl font-black tracking-tighter mb-2 text-white">
+            {header.name}
+          </h1>
+          <div
+            class="flex flex-wrap gap-x-3 gap-y-1 text-gray-400 font-mono text-xs"
+          >
+            <span>{header.location}</span>
+            <span class="text-white/10">/</span>
+            <a
+              href={`mailto:${header.email}`}
+              class="hover:text-[var(--primary)] transition-colors"
+              >{header.email}</a
+            >
+          </div>
+        </div>
+        <div class="flex gap-4 font-mono text-xs">
+          <a
+            href={"https://" + header.linkedin}
+            target="_blank"
+            class="text-gray-500 hover:text-[var(--primary)] transition-colors"
+            >LINKEDIN↗</a
+          >
+          <a
+            href={"https://" + header.links[0]}
+            target="_blank"
+            class="text-gray-500 hover:text-[var(--primary)] transition-colors"
+            >GITHUB↗</a
+          >
+          <button
+            class="text-[var(--primary)] hover:text-white transition-colors"
+            onclick="window.print()">PRINT_PDF</button
+          >
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-8 md:gap-12">
+        <!-- Left Column: Experience (8 cols) -->
+        <div class="md:col-span-8 space-y-8">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-1.5 h-1.5 bg-[var(--primary)]"></span>
+            <h2
+              class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500"
+            >
+              Experience
+            </h2>
+          </div>
+
+          <div class="space-y-6">
+            {
+              experience.map((job) => (
+                <div class="relative group">
+                  <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                    <h3 class="font-bold text-base text-gray-100 group-hover:text-[var(--primary)] transition-colors">
+                      {job.role}
+                    </h3>
+                    <span class="font-mono text-[10px] text-gray-500 uppercase tracking-wide">
+                      {job.period}
+                    </span>
+                  </div>
+
+                  <div class="text-xs text-[var(--secondary)] font-medium mb-1.5">
+                    {job.company}{" "}
+                    <span class="text-gray-600 font-normal">
+                      {" "}
+                      // {job.location}
+                    </span>
+                  </div>
+
+                  <ul class="space-y-1">
+                    {job.bullets.map((bullet) => (
+                      <li class="text-xs text-gray-400 leading-relaxed pl-2 relative border-l border-white/5 hover:border-[var(--primary)] transition-colors">
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <!-- Right Column: Skills, Education, Awards (4 cols) -->
+        <div class="md:col-span-4 space-y-10">
+          <!-- Education -->
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <span class="w-1.5 h-1.5 bg-[var(--secondary)]"></span>
+              <h2
+                class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500"
+              >
+                Education
+              </h2>
+            </div>
+            {
+              education.map((edu) => (
+                <div>
+                  <h3 class="font-bold text-sm text-gray-200">{edu.school}</h3>
+                  <p class="text-xs text-[var(--secondary)] mb-2">
+                    {edu.degree}
+                  </p>
+                  <p class="text-[10px] text-gray-500 leading-relaxed">
+                    {edu.description}
+                  </p>
+                </div>
+              ))
+            }
+          </div>
+
+          <!-- Skills / Tools -->
+          <div>
+            <h2
+              class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-3 border-b border-white/5 pb-1"
+            >
+              Toolkit
+            </h2>
+            <div class="flex flex-wrap gap-1.5">
+              {
+                skills_awards.tools.map((tool) => (
+                  <span class="text-[10px] bg-white/5 px-2 py-0.5 rounded text-gray-300 border border-white/5 hover:border-[var(--primary)] transition-colors cursor-default">
+                    {tool}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div>
+            <h2
+              class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-3 border-b border-white/5 pb-1"
+            >
+              Languages
+            </h2>
+            <div class="space-y-1.5">
+              {
+                skills_awards.languages.map((lang) => (
+                  <div class="flex justify-between text-xs">
+                    <span class="text-gray-300">{lang.lang}</span>
+                    <span class="text-gray-500 font-mono text-[10px]">
+                      {lang.level}
+                    </span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+
+          <!-- Awards -->
+          <div>
+            <h2
+              class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-3 border-b border-white/5 pb-1"
+            >
+              Awards & Certifications
+            </h2>
+            <ul class="space-y-1.5">
+              {
+                skills_awards.awards.map((award) => (
+                  <li class="text-[10px] text-gray-400 leading-relaxed flex items-start gap-2">
+                    <span class="text-[var(--primary)] mt-0.5">●</span> {award}
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  @media print {
+    body {
+      background: white;
+      color: black;
+    }
+    #resume {
+      box-shadow: none;
+      border: none;
+      max-width: 100%;
+      padding: 0;
+    }
+    h1,
+    h2,
+    h3 {
+      color: black !important;
+    }
+    p,
+    span,
+    li,
+    a {
+      color: black !important;
+    }
+    .glass {
+      display: none;
+    }
+    header,
+    footer {
+      display: none;
+    }
+  }
+</style>

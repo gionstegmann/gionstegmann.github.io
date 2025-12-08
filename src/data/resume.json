@@ -1,0 +1,145 @@
+{
+    "header": {
+        "name": "Gion Stegmann",
+        "location": "Zurich, Switzerland",
+        "email": "gion.stegmann@gmail.com",
+        "linkedin": "linkedin.com/in/gionstegmann",
+        "links": [
+            "github.com/gionstegmann"
+        ]
+    },
+    "education": [
+        {
+            "school": "ETH Zurich",
+            "degree": "Computer Science",
+            "location": "Zurich, Switzerland",
+            "description": "Focus on Machine Learning & Signal Processing. Thesis in Generative AI for musical synthesizers. Active in entrepreneurial & cultural student initiatives."
+        }
+    ],
+    "experience": [
+        {
+            "role": "Co-founder, Blogger & Rider",
+            "company": "MudMudMoto",
+            "location": "Europe / Middle East / Central Asia",
+            "period": "Feb 2024 - Present",
+            "bullets": [
+                "Documented a 15,000 km motorcycle expedition from Switzerland to Kazakhstan (via Iran, Afghanistan).",
+                "Navigated extreme environments (46°C heat, 4600m altitude, sandstorms).",
+                "Managed crises including interrogations by IRGC/Taliban and navigating war zones.",
+                "Currently writing a non-fiction book on resilience and cross-cultural experiences."
+            ]
+        },
+        {
+            "role": "Startup Support & Program Analyst",
+            "company": "Tenity",
+            "location": "Zurich",
+            "period": "Aug 2024 - Feb 2025",
+            "bullets": [
+                "Supported 20+ startups in acceleration (workshops, pitch sessions, ideation).",
+                "Built internal operational systems (Airtable, Make, Notion) to automate workflows.",
+                "Developed an internal AI-powered RAG startup search tool for startup scouting.",
+                "Researched and evaluated startups, mapping key trends and opportunities."
+            ]
+        },
+        {
+            "role": "Tutor: Rethinking Mobility",
+            "company": "ETH4D Summer School",
+            "location": "Kumasi, Ghana",
+            "period": "Aug 2023 - Sep 2023",
+            "bullets": [
+                "Assisted interdisciplinary groups ideating sustainable mobility solutions (Design Thinking).",
+                "Led group discussions and provided targeted feedback to refine ideas.",
+                "Facilitated a dynamic learning environment encouraging critical thinking."
+            ]
+        },
+        {
+            "role": "Partner & Coach",
+            "company": "Young Entrepreneur Exchange",
+            "location": "Zurich & Hawassa",
+            "period": "Jan 2023 - May 2023",
+            "bullets": [
+                "Mentored Hawassa University student entrepreneurs from concept to prototype.",
+                "Taught business development methods (Design Thinking, Lean Canvas)."
+            ]
+        },
+        {
+            "role": "Co-founder",
+            "company": "Jumo",
+            "location": "Zurich",
+            "period": "Nov 2022 - May 2023",
+            "bullets": [
+                "Led early-stage dev of a digital twin of Switzerland for urban planning insights.",
+                "Helped seek CHF 200k in seed funding from SwissPost."
+            ]
+        },
+        {
+            "role": "Vice President - Events",
+            "company": "ETH Entrepreneur Club",
+            "location": "Zurich",
+            "period": "Jun 2020 - Jun 2021",
+            "bullets": [
+                "Actively shaped the Club's strategic direction for the next 10 years.",
+                "Managed a 15-person team through COVID-19; adapted strategies to virtual/hybrid.",
+                "Organized 20+ events with a total budget of >CHF 150k."
+            ]
+        },
+        {
+            "role": "InCube Logistics & Singapore Lead",
+            "company": "ETH Entrepreneur Club",
+            "location": "Zurich",
+            "period": "Sep 2019 - Oct 2020",
+            "bullets": [
+                "Coordinated InCube Challenge logistics (CHF 100k budget).",
+                "Orchestrated Singapore hub operations, enhancing international collaboration.",
+                "Conceptualized strategic pivot to 'InCube Alpine Edition' during COVID."
+            ]
+        },
+        {
+            "role": "Producer, DJ & Content Creator",
+            "company": "Musical Career",
+            "location": "Zurich",
+            "period": "Jan 2021 - Present",
+            "bullets": [
+                "Resident DJ at bQm Bar and board member of DJ Events ETH.",
+                "Founded Gold Coast Productions to promote house music in Zurich."
+            ]
+        }
+    ],
+    "skills_awards": {
+        "languages": [
+            {
+                "lang": "French",
+                "level": "Mother tongue"
+            },
+            {
+                "lang": "English",
+                "level": "Highly skilled"
+            },
+            {
+                "lang": "German",
+                "level": "Skilled (C1)"
+            }
+        ],
+        "awards": [
+            "InCube Challenge 2022 Winner (Facilitator)",
+            "BCG Strategy Cup 2020 Semi-finalist",
+            "European First Aid License (BEPS)"
+        ],
+        "tools": [
+            "Python",
+            "Final Cut Pro",
+            "Adobe Photoshop",
+            "Automation tools (n8n, Make, etc.)",
+            "database management (Airtable, SQL, etc.)",
+            "APIs",
+            "Microsoft Office",
+            "Ableton Live"
+        ],
+        "soft": [
+            "Design Thinking",
+            "Team Leadership",
+            "Crisis Management",
+            "Public Speaking"
+        ]
+    }
+}

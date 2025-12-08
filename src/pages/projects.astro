@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import { getCollection } from "astro:content";
+
+const projectsValues = await getCollection("projects");
+
+// Sort manually to match the desired order or use a date field if added later.
+// For now, I'll map them by specific order preference since user had a specific order.
+const ORDER = ["MudMudMoto", "DawnShift", "Job Applications Pipeline"];
+
+const projects = projectsValues
+  .sort((a, b) => {
+    const indexA = ORDER.indexOf(a.data.title);
+    const indexB = ORDER.indexOf(b.data.title);
+    // Handle cases where title might not match exactly (though it should)
+    if (indexA === -1) return 1;
+    if (indexB === -1) return -1;
+    return indexA - indexB;
+  })
+  .map((project) => ({
+    title: project.data.title,
+    description: project.data.description,
+    tags: project.data.tags,
+    link: `/projects/${project.slug}`,
+  }));
+---
+
+<Layout title="Projects | Gion Stegmann">
+  <main class="container mx-auto px-6 pt-32 pb-20 max-w-5xl">
+    <h1 class="text-4xl font-black mb-12 flex items-center gap-4">
+      <span class="text-[var(--primary)]">./</span>projects
+    </h1>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      {
+        projects.map((project) => (
+          <Card
+            title={project.title}
+            body={project.description}
+            href={project.link}
+            tags={project.tags}
+          />
+        ))
+      }
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Portfolio of Gion - Developer & Creative" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<!-- Google Fonts: Inter -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-[var(--bg-dark)] text-white antialiased font-mono">
+		
+		<!-- Sticky Glass Header (Compact) -->
+		<header class="fixed top-0 w-full z-50 transition-all duration-300 glass border-b border-white/5 backdrop-blur-md">
+			<div class="container mx-auto px-6 py-3 flex justify-between items-center">
+				<a href="/" class="text-lg font-black tracking-tighter hover:text-[var(--primary)] transition-colors flex items-center gap-2">
+					<span class="text-[var(--primary)] text-xl">⌘</span> GION
+				</a>
+				
+				<nav class="hidden md:flex gap-6 text-xs uppercase tracking-widest font-bold text-gray-500">
+					<a href="/projects" class="hover:text-white transition-colors">Projects</a>
+					<a href="/blog" class="hover:text-white transition-colors">Blog</a>
+					<a href="/resume" class="hover:text-white transition-colors">Resume</a>
+				</nav>
+			</div>
+		</header>
+
+		<slot />
+
+		<footer class="py-6 text-center text-gray-700 text-xs font-mono border-t border-white/5 mt-12">
+			<p>~/gion-stegmann <span class="mx-2">|</span> built_with: [astro, tailwind]</p>
+		</footer>
+	</body>
+</html>

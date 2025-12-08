@@ -1,0 +1,89 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+    const projects = await getCollection("projects");
+    return projects.map((project) => ({
+        params: { slug: project.slug },
+        props: { project },
+    }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+
+<Layout title={`${project.data.title} | Gion Stegmann`}>
+    <main class="container mx-auto px-6 pt-32 pb-20 max-w-3xl">
+        <a
+            href="/projects"
+            class="inline-block mb-8 text-xs text-[var(--primary)] hover:underline font-mono"
+            >← BACK_TO_PROJECTS</a
+        >
+
+        <header class="mb-12">
+            <h1 class="text-4xl font-black mb-4">{project.data.title}</h1>
+            <p class="text-xl text-gray-400 leading-relaxed">
+                {project.data.description}
+            </p>
+
+            {
+                project.data.tags && (
+                    <div class="flex gap-2 mt-6">
+                        {project.data.tags.map((tag) => (
+                            <span class="text-xs font-mono text-[var(--primary)] border border-[var(--primary)]/20 px-2 py-1 rounded">
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+                )
+            }
+
+            <div class="flex gap-4 mt-8">
+                {
+                    project.data.link && (
+                        <a
+                            href={project.data.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-sm font-bold bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition-colors"
+                        >
+                            Visit Website ↗
+                        </a>
+                    )
+                }
+                {
+                    project.data.github && (
+                        <a
+                            href={project.data.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-sm font-bold border border-white/20 px-4 py-2 rounded hover:bg-white/10 transition-colors"
+                        >
+                            GitHub ↗
+                        </a>
+                    )
+                }
+                {
+                    project.data.instagram && (
+                        <a
+                            href={project.data.instagram}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-sm font-bold border border-white/20 px-4 py-2 rounded hover:bg-white/10 transition-colors"
+                        >
+                            Instagram ↗
+                        </a>
+                    )
+                }
+            </div>
+        </header>
+
+        <article
+            class="prose prose-invert prose-p:text-gray-300 prose-headings:font-bold prose-a:text-[var(--primary)] max-w-none"
+        >
+            <Content />
+        </article>
+    </main>
+</Layout>

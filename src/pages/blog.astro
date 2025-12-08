@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+// Fetch posts from src/content/blog/
+const posts = (await getCollection("blog"))
+  .filter((post) => post.id !== "boilerplate.md") // Filter out boilerplate
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<Layout title="Blog | Gion Stegmann">
+  <main class="container mx-auto px-6 pt-32 pb-20 max-w-3xl">
+    <h1 class="text-4xl font-black mb-12 flex items-center gap-4">
+      <span class="text-[var(--secondary)]">~/</span>logs
+    </h1>
+
+    <div class="flex flex-col gap-4">
+      {
+        posts.map((post) => (
+          <a
+            href={`/blog/${post.slug}`}
+            class="group block p-6 border border-white/5 rounded-lg hover:border-[var(--primary)]/50 hover:bg-white/5 transition-all"
+          >
+            <div class="flex justify-between items-baseline mb-2">
+              <h2 class="text-xl font-bold group-hover:text-[var(--primary)] transition-colors">
+                {post.data.title}
+              </h2>
+              <span class="text-xs font-mono text-gray-500">
+                {post.data.pubDate.toISOString().slice(0, 10)}
+              </span>
+            </div>
+            <p class="text-gray-400 text-sm">{post.data.description}</p>
+          </a>
+        ))
+      }
+    </div>
+  </main>
+</Layout>
