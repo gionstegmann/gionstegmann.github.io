@@ -1,3 +1,12 @@
+# Welcome to my blog!
+
+You can find it at [https://gionstegmann.github.io](https://gionstegmann.github.io).
+
+
+
+It's built with [Astro](https://astro.build/). Details below. 👇
+
+
 # Astro Starter Kit: Basics
 
 ```sh
