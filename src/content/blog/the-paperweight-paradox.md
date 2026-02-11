@@ -3,7 +3,7 @@ title: "The Paperweight Paradox"
 description: "How the Taliban rejected my money (and why I'm building an app because of it)"
 pubDate: 2026-02-11
 tags: ["travel", "life lessons", "personal project", "android"]
-heroImage: "/images/cash-exchange.jpg"
+heroImage: "@assets/images/cash-exchange.jpg"
 ---
 
 During my stint at Tenity, I met a guy named Jamie. Jamie is a startup veteran and the kind of seasoned adventurer that makes you question your life choices. He once completed the Mongolian Rally: a 40,000 km journey to Mongolia and back in a car worth less than $1,000.
