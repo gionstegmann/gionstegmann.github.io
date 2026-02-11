@@ -1,28 +1,46 @@
-<section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-  
+<section
+  class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 bg-[var(--bg-dark)]"
+>
   <!-- Content -->
   <div class="container mx-auto px-6 relative z-10 text-center">
-    <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-tight">
-      Building <span class="text-gradient">Digital</span><br>
+    <h1
+      class="text-5xl md:text-8xl font-black uppercase tracking-wide mb-6 leading-tight text-[var(--text-main)]"
+    >
+      Building <span class="text-[var(--primary)]">Digital</span><br />
       Experiences.
     </h1>
-    
-    <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto mb-12">
-      I'm Gion. A developer obsessed with performance, clean aesthetics, and the little details.
+
+    <p
+      class="text-xl md:text-2xl text-[var(--text-muted)] max-w-2xl mx-auto mb-12 font-medium"
+    >
+      I'm Gion. A developer obsessed with performance, clean aesthetics, and the
+      little details.
     </p>
 
-    <div class="flex gap-4 justify-center">
-      <a href="#projects" class="bg-[var(--primary)] text-black font-bold py-3 px-8 rounded-full hover:scale-105 transition-transform">
+    <div class="flex flex-col md:flex-row gap-4 justify-center">
+      <a
+        href="#projects"
+        class="bg-[var(--primary)] text-white font-bold uppercase tracking-wider py-4 px-10 rounded-xl hover:bg-[#e08933] transition-colors shadow-lg"
+      >
         View Work
       </a>
-      <a href="#contact" class="glass text-white font-bold py-3 px-8 rounded-full hover:bg-white/10 transition-colors">
+      <a
+        href="#contact"
+        class="text-white font-bold uppercase tracking-wider py-4 px-10 rounded-xl border-2 border-[var(--text-main)] hover:bg-[var(--text-main)] hover:text-[var(--bg-dark)] transition-colors"
+      >
         Contact Me
       </a>
     </div>
   </div>
 
-  <!-- Background Ambience -->
-  <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--primary)] rounded-full blur-[120px] opacity-20 animate-float"></div>
-  <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[var(--secondary)] rounded-full blur-[120px] opacity-10 animate-float" style="animation-delay: -3s;"></div>
-  
+  <!-- Background Ambience - Rugged/Geometric -->
+  <div
+    class="absolute top-1/4 left-1/4 w-64 h-64 bg-[var(--tertiary)] rounded-full opacity-40 animate-float border border-zinc-700"
+  >
+  </div>
+  <div
+    class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#121212] rounded-full opacity-60 animate-float border border-zinc-800"
+    style="animation-delay: -3s;"
+  >
+  </div>
 </section>

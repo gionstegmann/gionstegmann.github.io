@@ -2,25 +2,24 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-    /* HSL Palette - Deep Space Theme */
-    --hue: 260;
-    --bg-dark: hsl(260, 20%, 6%);
-    /* Slightly lighter for cards */
-    --bg-card: hsl(260, 20%, 10%);
+    /* Rugged Digital / Mango Aesthetic */
+    --bg-dark: #1A1A1A;
+    --bg-light: #F4F4F4;
 
-    --primary: hsl(265, 100%, 70%);
-    --primary-glow: hsla(265, 100%, 70%, 0.4);
+    --text-main: #F0F0F0;
+    --text-muted: #A1A1AA;
 
-    --secondary: hsl(180, 100%, 60%);
-    --secondary-glow: hsla(180, 100%, 60%, 0.3);
-
-    --text-main: hsl(0, 0%, 98%);
-    --text-muted: hsl(260, 20%, 70%);
+    --primary: #FF9F43;
+    /* Mango */
+    --secondary: #87A330;
+    /* Lime Moss */
+    --tertiary: #2B2B2B;
+    /* Suzuki Black */
 }
 
 html,
 body {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Montserrat', system-ui, sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-main);
     scroll-behavior: smooth;
@@ -36,21 +35,8 @@ body {
     }
 
     50% {
-        transform: translateY(-20px);
-    }
-}
-
-@keyframes pulse-glow {
-
-    0%,
-    100% {
-        opacity: 0.5;
-        transform: scale(1);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.1);
+        transform: translateY(-10px);
+        /* Reduced movement for "heavier" feel */
     }
 }
 
@@ -59,14 +45,17 @@ body {
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    /* Solid colors for this theme, or hard gradient */
+    background: linear-gradient(135deg, var(--primary) 0%, #FFB470 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
+/* Redefined strictly as "Mass" - no transparency */
 .glass {
-    background: hsla(260, 20%, 10%, 0.6);
-    backdrop-filter: blur(12px);
-    border: 1px solid hsla(0, 0%, 100%, 0.05);
+    background-color: var(--tertiary);
+    border: 1px solid #3f3f46;
+    /* zinc-700 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
 }

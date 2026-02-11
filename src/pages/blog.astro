@@ -11,7 +11,7 @@ const posts = (await getCollection("blog"))
 <Layout title="Blog | Gion Stegmann">
   <main class="container mx-auto px-6 pt-32 pb-20 max-w-3xl">
     <h1 class="text-4xl font-black mb-12 flex items-center gap-4">
-      <span class="text-[var(--secondary)]">~/</span>logs
+      <span class="text-[var(--secondary)]">./</span>LOGS
     </h1>
 
     <div class="flex flex-col gap-4">
@@ -19,17 +19,19 @@ const posts = (await getCollection("blog"))
         posts.map((post) => (
           <a
             href={`/blog/${post.slug}`}
-            class="group block p-6 border border-white/5 rounded-lg hover:border-[var(--primary)]/50 hover:bg-white/5 transition-all"
+            class="group block p-6 border border-zinc-800 rounded-lg hover:border-[var(--secondary)] hover:bg-[var(--bg-card)] transition-all shadow-lg hover:-translate-y-1"
           >
             <div class="flex justify-between items-baseline mb-2">
-              <h2 class="text-xl font-bold group-hover:text-[var(--primary)] transition-colors">
+              <h2 class="text-xl font-bold text-[var(--text-main)] group-hover:text-[var(--secondary)] transition-colors uppercase">
                 {post.data.title}
               </h2>
-              <span class="text-xs font-mono text-gray-500">
+              <span class="text-xs font-mono text-[var(--text-muted)]">
                 {post.data.pubDate.toISOString().slice(0, 10)}
               </span>
             </div>
-            <p class="text-gray-400 text-sm">{post.data.description}</p>
+            <p class="text-[var(--text-muted)] text-sm font-medium">
+              {post.data.description}
+            </p>
           </a>
         ))
       }
