@@ -7,7 +7,12 @@ const projectsValues = await getCollection("projects");
 
 // Sort manually to match the desired order or use a date field if added later.
 // For now, I'll map them by specific order preference since user had a specific order.
-const ORDER = ["MudMudMoto", "DawnShift", "Job Applications Pipeline"];
+const ORDER = [
+  "Nomad Translate",
+  "MudMudMoto",
+  "DawnShift",
+  "Job Applications Pipeline",
+];
 
 const projects = projectsValues
   .sort((a, b) => {

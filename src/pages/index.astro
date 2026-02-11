@@ -4,7 +4,12 @@ import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 const allProjects = await getCollection("projects");
-const ORDER = ["MudMudMoto", "DawnShift", "Job Applications Pipeline"];
+const ORDER = [
+  "Nomad Translate",
+  "MudMudMoto",
+  "DawnShift",
+  "Job Applications Pipeline",
+];
 const recentProjects = allProjects
   .sort((a, b) => {
     // Keep same order as projects page
@@ -46,8 +51,8 @@ const recentPosts = allPosts
         Based in Zurich with roots in Belgium.
         <br />
         I studied Computer Science at ETH Zurich. Did a lot of startup-related stuff
-        next to that. Worked for a startup accelerator and a VC. Then went on to
-        travel all the way to Kazakhstan on my old 2001 Suzuki DR650.
+        next to that. Worked for a startup accelerator and a VC. Then went on to travel
+        all the way to Kazakhstan on my old 2001 Suzuki DR650.
       </p>
     </section>
 
