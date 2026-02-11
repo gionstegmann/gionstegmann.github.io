@@ -39,24 +39,25 @@ const recentPosts = allPosts
   }));
 ---
 
-<Layout title="Gion Stegmann | ⌘">
+<Layout title="~/gion-stegmann">
   <main class="container mx-auto px-6 pt-24 pb-12 max-w-5xl">
     <!-- Header / Bio -->
-    <section class="mb-16 border-b border-zinc-800 pb-8">
+    <section class="mb-12 border-b border-zinc-800 pb-8">
       <h1 class="text-3xl font-black mb-2 tracking-tight uppercase">
         Gion Stegmann
       </h1>
-      <p class="text-[var(--primary)] font-mono text-sm mb-4">
+      <p class="text-[var(--primary)] font-mono text-base mb-4">
         Adventurer // Builder // Creative //
       </p>
       <p
-        class="text-[var(--text-muted)] max-w-2xl leading-relaxed text-sm font-medium"
+        class="text-[var(--text-muted)] max-w-2xl leading-relaxed text-base font-medium"
       >
         Based in Zurich with roots in Belgium.
         <br />
         I studied Computer Science at ETH Zurich. Did a lot of startup-related stuff
         next to that. Worked for a startup accelerator and a VC. Then went on to travel
-        all the way to Kazakhstan on my old 2001 Suzuki DR650.
+        all the way to Kazakhstan on my old 2001 Suzuki DR650. Now I'm focussing on
+        building my own stuff.
       </p>
     </section>
 
@@ -65,8 +66,10 @@ const recentPosts = allPosts
       <!-- Left Col: Projects -->
       <section>
         <div class="flex items-center justify-between mb-6">
-          <h2 class="font-bold flex items-center gap-2 text-[var(--text-main)]">
-            <span class="text-[var(--primary)] text-xs">●</span>
+          <h2
+            class="text-xl font-bold flex items-center gap-2 text-[var(--text-main)]"
+          >
+            <span class="text-[var(--primary)]">./</span>
             LATEST_PROJECTS
           </h2>
           <a
@@ -103,8 +106,10 @@ const recentPosts = allPosts
       <!-- Right Col: Thoughts/Log -->
       <section>
         <div class="flex items-center justify-between mb-6">
-          <h2 class="font-bold flex items-center gap-2 text-[var(--text-main)]">
-            <span class="text-[var(--secondary)] text-xs">●</span>
+          <h2
+            class="text-xl font-bold flex items-center gap-2 text-[var(--text-main)]"
+          >
+            <span class="text-[var(--secondary)]">./</span>
             LOGS
           </h2>
           <a

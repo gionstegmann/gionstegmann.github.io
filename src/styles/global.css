@@ -17,6 +17,10 @@
     /* Suzuki Black */
 }
 
+html {
+    font-size: 110%;
+}
+
 html,
 body {
     font-family: 'Montserrat', system-ui, sans-serif;
