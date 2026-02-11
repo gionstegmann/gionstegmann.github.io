@@ -21,6 +21,7 @@ export const collections = {
             link: z.string().optional(),
             github: z.string().optional(),
             instagram: z.string().optional(),
+            heroImage: z.string().optional(),
         }),
     }),
 };

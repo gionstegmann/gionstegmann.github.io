@@ -3,6 +3,7 @@ title: "New Adventure: [Title Here]"
 description: "A short summary of the post that will appear in the list view."
 pubDate: 2025-01-01
 tags: ["travel", "tech", "musings"]
+heroImage: "/images/your-hero-image.png"
 ---
 
 ## Introduction

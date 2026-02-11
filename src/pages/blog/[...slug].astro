@@ -39,6 +39,16 @@ const { Content } = await entry.render();
       >
         {entry.data.description}
       </p>
+
+      {
+        entry.data.heroImage && (
+          <img
+            src={entry.data.heroImage}
+            alt={entry.data.title}
+            class="w-full h-auto aspect-video object-cover rounded-xl border border-zinc-800 mt-8"
+          />
+        )
+      }
     </div>
 
     <!-- Markdown Content -->
