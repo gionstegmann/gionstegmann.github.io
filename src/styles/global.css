@@ -17,8 +17,10 @@
     /* Suzuki Black */
 }
 
-html {
-    font-size: 110%;
+@media (min-width: 768px) {
+    html {
+        font-size: 110%;
+    }
 }
 
 html,

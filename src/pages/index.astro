@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import profilePic from "../assets/profile-pic.png";
 
 const allProjects = await getCollection("projects");
 const ORDER = [
@@ -43,22 +45,37 @@ const recentPosts = allPosts
   <main class="container mx-auto px-6 pt-24 pb-12 max-w-5xl">
     <!-- Header / Bio -->
     <section class="mb-12 border-b border-zinc-800 pb-8">
-      <h1 class="text-3xl font-black mb-2 tracking-tight uppercase">
-        Gion Stegmann
-      </h1>
-      <p class="text-[var(--primary)] font-mono text-base mb-4">
-        Adventurer // Builder // Creative //
-      </p>
-      <p
-        class="text-[var(--text-muted)] max-w-2xl leading-relaxed text-base font-medium"
+      <div
+        class="flex flex-col md:flex-row items-center gap-8 md:items-start md:justify-between"
       >
-        Based in Zurich with roots in Belgium.
-        <br />
-        I studied Computer Science at ETH Zurich. Did a lot of startup-related stuff
-        next to that. Worked for a startup accelerator and a VC. Then went on to travel
-        all the way to Kazakhstan on my old 2001 Suzuki DR650. Now I'm focussing on
-        building my own stuff.
-      </p>
+        <div class="flex-1">
+          <h1 class="text-3xl font-black mb-2 tracking-tight uppercase">
+            Gion Stegmann
+          </h1>
+          <p class="text-[var(--primary)] font-mono text-base mb-4">
+            Adventurer // Builder // Creative //
+          </p>
+          <p
+            class="text-[var(--text-muted)] max-w-2xl leading-relaxed text-base font-medium"
+          >
+            Based in Zurich with roots in Belgium.
+            <br />
+            I studied Computer Science at ETH Zurich. Did a lot of startup-related
+            stuff next to that. Worked for a startup accelerator and a VC. Then went
+            on to travel all the way to Kazakhstan on my old 2001 Suzuki DR650. Now
+            I'm focussing on building my own stuff.
+          </p>
+        </div>
+        <div class="hidden md:block shrink-0">
+          <Image
+            src={profilePic}
+            alt="Gion Stegmann"
+            width={512}
+            height={512}
+            class="rounded-2xl shadow-xl w-48 h-48 object-cover border border-zinc-700/50"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- Dashboard Grid -->
