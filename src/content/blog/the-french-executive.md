@@ -2,7 +2,7 @@
 title: "The French Executive"
 description: "How I Vibe Coded My Sleep Schedule Back to Normal (And Built My First Android App in 24 Hours)"
 pubDate: 2025-12-08
-tags: ["vibe coding", "android app", "personal project"]
+tags: ["vibe coding", "android", "personal project"]
 ---
 
 I recently came back from a big six-month motorcycle trip to zero job and zero schedule. Naturally, it took zero effort for my circadian rhythm to drift off a cliff.
@@ -101,6 +101,6 @@ It didn't remove the effort, it shifted the focus. Which meant more time and ene
 
 ## Try It Out
 
-If you’re a student whose schedule drifted during the holidays, or a traveler fighting jet lag, give the app a shot. And if you’ve been on the fence about trying "vibe coding" tools—take this as your sign.
+If you’re a student whose schedule drifted during the holidays, or a traveler fighting jet lag, give the app a shot. And if you’ve been on the fence about trying vibe coding tools, take this as your sign.
 
 **Repo:** [Link to the GitHub](https://github.com/gionstegmann/DawnShift)
